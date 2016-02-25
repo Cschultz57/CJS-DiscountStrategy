@@ -1,6 +1,6 @@
 package cjs.discountstrategy;
 
-public class FakeDataBase {
+public class FakeDataBase implements DataBaseStrategy {
 
     private Customer[] customers = {
         new Customer("100", "Bob James"),
@@ -13,6 +13,7 @@ public class FakeDataBase {
         new Product("33", "Men's Black Belt", 39.95, new NoDiscount())
     };
 
+    @Override
     public final Product findProductById(String prodId) {
         // needs validation
         Product product = null;
@@ -25,6 +26,7 @@ public class FakeDataBase {
         return product;
     }
 
+    @Override
     public final Customer findCustomerById(String custId) {
         // needs validation
         Customer customer = null;

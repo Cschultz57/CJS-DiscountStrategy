@@ -2,32 +2,30 @@
 package cjs.discountstrategy;
 
 public class LineItem {
-    private int prodId;
-    private double unitPrice;
+    private Product product;
     private int qty;
 
-    public int getProdId() {
-        return prodId;
+    public LineItem(String prodId, int qty, DataBaseStrategy db) {
+        setProduct(db.findProductById(prodId));
+        this.qty = qty;
     }
 
-    public void setProdId(int prodId) {
-        this.prodId = prodId;
+        
+    public final Product getProduct() {
+        return product;
     }
 
-    public double getUnitPrice() {
-        return unitPrice;
+    public final void setProduct(Product product) {
+        this.product = product;
     }
 
-    public void setUnitPrice(double unitPrice) {
-        this.unitPrice = unitPrice;
-    }
-
-    public int getQty() {
+    public final int getQty() {
         return qty;
     }
 
-    public void setQty(int qty) {
+    public final void setQty(int qty) {
         this.qty = qty;
     }
+
     
 }
