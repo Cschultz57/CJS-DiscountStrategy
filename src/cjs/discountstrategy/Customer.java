@@ -8,8 +8,8 @@ public class Customer {
 
     private String custId;
     private String custName;
-    
-    public Customer(String custId, String custName){
+
+    public Customer(String custId, String custName) {
         setCustId(custId);
         setCustName(custName);
     }

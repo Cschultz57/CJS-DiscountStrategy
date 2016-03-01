@@ -38,4 +38,5 @@ public class FakeDataBase implements DataBaseStrategy {
         }
         return customer;
     }
+
 }

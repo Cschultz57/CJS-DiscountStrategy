@@ -1,22 +1,22 @@
-
 package cjs.discountstrategy;
 
 /**
  *
  * @author Carson Schultz
  */
-public class NoDiscount implements DiscountStrategy{
+public class NoDiscount implements DiscountStrategy {
+
     private double discountRate;
     private final int NO_DISCOUNT = 0;
-    
-    public NoDiscount(){
-        
+
+    public NoDiscount() {
+
     }
-    
+
     @Override
     public final double getDiscountAmt(int qty, double unitCost) {
         //needs validation
-        return NO_DISCOUNT; 
+        return NO_DISCOUNT;
     }
 
     public final double getDiscountRate() {
@@ -27,5 +27,5 @@ public class NoDiscount implements DiscountStrategy{
         //needs validation
         this.discountRate = discountRate;
     }
-    
+
 }

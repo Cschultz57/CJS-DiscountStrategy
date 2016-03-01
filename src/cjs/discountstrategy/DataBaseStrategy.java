@@ -14,5 +14,5 @@ public interface DataBaseStrategy {
     Customer findCustomerById(String custId);
 
     Product findProductById(String prodId);
-    
+
 }

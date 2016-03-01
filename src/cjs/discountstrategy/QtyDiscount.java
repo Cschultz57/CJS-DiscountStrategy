@@ -5,6 +5,7 @@ package cjs.discountstrategy;
  * @author Carson Schultz
  */
 public class QtyDiscount implements DiscountStrategy {
+
     private double discountRate;
     private int minQty;
     private final int NO_DISCOUNT = 0;
@@ -17,12 +18,12 @@ public class QtyDiscount implements DiscountStrategy {
     @Override
     public final double getDiscountAmt(int qty, double unitCost) {
         //needs validation
-        if(qty >= minQty){
+        if (qty >= minQty) {
             return unitCost * qty * discountRate;
-        }else{
+        } else {
             return NO_DISCOUNT;
         }
-        
+
     }
 
     public final int getMinQty() {

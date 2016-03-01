@@ -4,18 +4,16 @@ public class Register {
 
     private Receipt receipt;
     private String storeName;
-    
 
     public final void startNewSale(String custId, DataBaseStrategy db) {
         //needs validation
-        receipt = new Receipt(custId, db);
+        receipt = new Receipt(custId, db, "Kohls");
 
     }
 
-    public final void endSale() {
-
+    public final void endSale(OutputStrategy output) {
+        output.printReceipt(receipt);
     }
-    
 
     public final void addItemToSale(String prodId, int qty) {
         receipt.addItemToReceipt(prodId, qty);
