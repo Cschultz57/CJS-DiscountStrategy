@@ -12,9 +12,16 @@ public class LineItem {
         getSubTotal();
     }
 
-    public String getLineItem() {
+    /**
+     *
+     * @return product info and quantity
+     */
+    public final String getLineItem() {
         String lineItem = this.getProduct().getProdId() + " " + this.getProduct().getProdName() + " " + this.getQty();
         return lineItem;
+    }
+    public final String getProductName(){
+        return product.getProdName();
     }
 
     public final Product getProduct() {

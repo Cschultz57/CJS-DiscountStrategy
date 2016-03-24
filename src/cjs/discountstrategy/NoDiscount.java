@@ -9,10 +9,6 @@ public class NoDiscount implements DiscountStrategy {
     private double discountRate;
     private final int NO_DISCOUNT = 0;
 
-    public NoDiscount() {
-
-    }
-
     @Override
     public final double getDiscountAmt(int qty, double unitCost) {
         //needs validation

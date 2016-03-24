@@ -12,7 +12,7 @@ package cjs.discountstrategy;
 public class ConsoleOutput implements OutputStrategy {
 
     @Override
-    public void printReceipt(Receipt r) {
+    public final void printReceipt(Receipt r) {
         System.out.println(r.ReceiptFormat());
     }
 

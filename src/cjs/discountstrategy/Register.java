@@ -4,6 +4,7 @@ public class Register {
 
     private Receipt receipt;
     private String storeName;
+    
 
     public final void startNewSale(String custId, DataBaseStrategy db) {
         //needs validation
@@ -16,6 +17,7 @@ public class Register {
     }
 
     public final void addItemToSale(String prodId, int qty) {
+        //needs validation
         receipt.addItemToReceipt(prodId, qty);
     }
 
